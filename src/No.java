@@ -17,5 +17,18 @@ public class No {
             buscaPreOrdem(node.direita);
         }
     }
+    public void BuscaEmOrdem(No node) {
+        if (node != null) {
+            BuscaEmOrdem(node.esquerda);
+            System.out.print(node.valor + " ");
+            BuscaEmOrdem(node.direita);
+        }
+    }
+}
+
+
+
+
+
 }
 
