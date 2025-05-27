@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class arvore {
+public class Arvore {
 
     No raiz;
 
@@ -18,15 +18,22 @@ public class arvore {
         }
     }
 
-    public void BuscaEmOrdem(No node) {
+    public void buscaEmOrdem(No node) {
         if (node != null) {
-            BuscaEmOrdem(node.esquerda);
+            buscaEmOrdem(node.esquerda);
             System.out.print(node.valor + " ");
-            BuscaEmOrdem(node.direita);
+            buscaEmOrdem(node.direita);
+        }
+    }
+    public void buscaPosOrdem(No node) {
+        if (node != null) {
+            buscaPosOrdem(node.esquerda);
+            buscaPosOrdem(node.direita);
+            System.out.println(node.valor + " ");
         }
     }
 
-    public void buscarEmNivel() {
+    public void buscaEmNivel() {
         if (raiz == null) ;
         Queue<No> fila = new LinkedList<>();
         fila.add(raiz);
