@@ -120,7 +120,6 @@ public class Arvore {
             if (atual.esquerda != null) fila.add(atual.esquerda);
             if (atual.direita != null) fila.add(atual.direita);
         }
-
         return contador;
     }
 
